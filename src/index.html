@@ -41,6 +41,7 @@
           type: "loop",
           autoplay: true,
           arrows: false,
+          pagination: false,
         });
 
         splide.mount({ SlideNumber });
@@ -108,84 +109,53 @@
 
       <div class="flex h-full">
         <!-- car -->
-        <div class="car px-5 w-3/5 pt-12 relative">
+        <div class="car px-5 w-3/5 pt-12 relative h-full">
           <!-- car slider -->
           <section class="splide" aria-label="Car Slider">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                  <div class="image">
+                  <div class="image relative h-full">
                     <img
                       src="/public/images/wish.png"
                       class="relative z-10"
                       alt=""
                     />
-                    <img
-                      class="image-reflection relative bottom-10 z-0 [mask-image:linear-gradient(transparent_1%,rgba(255,255,255,.7)_99%)] [transform:rotateX(180deg)] bg-contain bg-no-repeat"
+                    <!-- <img
+                      class="image-reflection absolute bottom-20 z-0 [mask-image:linear-gradient(transparent_1%,rgba(255,255,255,.7)_99%)] [transform:rotateX(180deg)] bg-contain bg-no-repeat"
                       src="/public/images/wish.png"
-                    />
+                    /> -->
                   </div>
                 </li>
                 <li class="splide__slide">
-                  <div class="image">
+                  <div class="image relative h-full">
                     <img
                       src="/public/images/big-bmw.png"
                       class="relative z-10"
                       alt=""
                     />
-                    <img
-                      class="image-reflection relative bottom-10 z-0 [mask-image:linear-gradient(transparent_1%,rgba(255,255,255,.7)_99%)] [transform:rotateX(180deg)] bg-contain bg-no-repeat"
+                    <!-- <img
+                      class="image-reflection absolute bottom-20 z-0 [mask-image:linear-gradient(transparent_1%,rgba(255,255,255,.7)_99%)] [transform:rotateX(180deg)] bg-contain bg-no-repeat"
                       src="/public/images/big-bmw.png"
-                    />
+                    /> -->
                   </div>
                 </li>
                 <li class="splide__slide">
-                  <div class="image">
+                  <div class="image relative h-full">
                     <img
                       src="/public/images/yellow.png"
                       class="relative z-10"
                       alt=""
                     />
-                    <img
-                      class="image-reflection relative bottom-10 z-0 [mask-image:linear-gradient(transparent_1%,rgba(255,255,255,.7)_99%)] [transform:rotateX(180deg)] bg-contain bg-no-repeat"
+                    <!-- <img
+                      class="image-reflection absolute bottom-20 z-0 [mask-image:linear-gradient(transparent_1%,rgba(255,255,255,.7)_99%)] [transform:rotateX(180deg)] bg-contain bg-no-repeat"
                       src="/public/images/yellow.png"
-                    />
+                    /> -->
                   </div>
                 </li>
               </ul>
             </div>
           </section>
-
-          <div class="absolute left-0 bottom-0 h-1/3 w-full">
-            <div class="cta flex items-center justify-center mt-5 gap-10">
-              <button class="py-7 px-11 bg-[#E5F9FD] rounded-[20px]">
-                Call Now
-              </button>
-              <button class="py-7 px-11 bg-[#E5F9FD] rounded-[20px]">
-                Download Our App
-              </button>
-            </div>
-
-            <div class="socials absolute bottom-8 left-6">
-              <ul class="flex flex-col items-center gap-4">
-                <li>
-                  <a href="">
-                    <img src="/public/images/ig_dark.png" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="/public/images/fb_dark.png" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="/public/images/wa_dark.png" alt="" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
 
         <!-- make-trip -->
@@ -262,6 +232,37 @@
               Calculate Price
             </button>
           </form>
+        </div>
+      </div>
+
+      <div class="absolute left-0 bottom-0 h-1/4 w-3/5">
+        <div class="cta flex items-center justify-center mt-5 gap-10">
+          <button class="py-7 px-11 bg-[#E5F9FD] rounded-[20px]">
+            Call Now
+          </button>
+          <button class="py-7 px-11 bg-[#E5F9FD] rounded-[20px]">
+            Download Our App
+          </button>
+        </div>
+
+        <div class="socials absolute bottom-8 left-6">
+          <ul class="flex flex-col items-center gap-4">
+            <li>
+              <a href="">
+                <img src="/public/images/ig_dark.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="/public/images/fb_dark.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="/public/images/wa_dark.png" alt="" />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
