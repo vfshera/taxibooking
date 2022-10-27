@@ -47,6 +47,134 @@
     </header>
 
     <!-- HERO -->
+    <section
+      class="hero relative min-h-[924px] bg-cover pt-44 bg-no-repeat [background-image:url('/public/images/blue-bg.png')]"
+    >
+      <!-- TEXT CONTAINER -->
+      <div class="site-container flex gap-[90px] items-center">
+        <p class="text-5xl font-medium text-blue">CALL 1234-456-789</p>
+
+        <div class="flex flex-col justify-center items-center">
+          <span class="text-[40px] text-blue tracking-[.24em]">
+            ALWAYS THERE WHEN
+          </span>
+          <span class="text-[70px] font-medium text-blue leading-none"
+            >YOU NEED A TAXI</span
+          >
+        </div>
+      </div>
+
+      <div class="flex h-full">
+        <!-- car -->
+        <div class="car w-3/5"></div>
+
+        <!-- make-trip -->
+        <div
+          class="make-trip w-2/5 pt-[100px] flex flex-col pr-[125px] relative h-full"
+        >
+          <p class="text-[20px] font-medium">MAKE YOUR TRIP NOW</p>
+          <span class="bg-black w-10 h-[2px]"></span>
+          <!-- FORM -->
+          <form action="" class="mt-5 flex-col flex gap-5 w-full">
+            <div
+              class="input-group bg-white w-full flex gap-5 items-center py-4 px-9"
+            >
+              <img src="/public/images/car.png" class="h-5" alt="" />
+              <select name="" id="" class="bg-transparent px-1 text-center">
+                <option value="" class="text-center">Select Your Car</option>
+                <option value="" class="text-center">Car 1</option>
+              </select>
+            </div>
+
+            <div class="grid grid-cols-2 gap-5 w-full">
+              <div
+                class="input-group bg-white flex gap-2 items-center py-4 pr-4 pl-9"
+              >
+                <img src="/public/images/truck-pickup.png" class="h-5" alt="" />
+
+                <input
+                  type="text"
+                  placeholder="Pickup Location"
+                  class="bg-white h-full outline-none border-l w-full border-gray-200 pl-2"
+                />
+              </div>
+
+              <div
+                class="input-group bg-white flex gap-2 items-center py-4 pr-4 pl-9"
+              >
+                <img src="/public/images/calender.png" class="h-5" alt="" />
+
+                <input
+                  type="text"
+                  placeholder="Date and Time"
+                  class="bg-white h-full outline-none border-l w-full border-gray-200 pl-2"
+                />
+              </div>
+              <div
+                class="input-group bg-white flex gap-2 items-center py-4 pr-4 pl-9"
+              >
+                <img src="/public/images/truck-pickup.png" class="h-5" alt="" />
+
+                <input
+                  type="text"
+                  placeholder="Dropoff Location"
+                  class="bg-white h-full outline-none border-l w-full border-gray-200 pl-2"
+                />
+              </div>
+
+              <div
+                class="input-group bg-white flex gap-2 items-center py-4 pr-4 pl-9"
+              >
+                <img src="/public/images/calender.png" class="h-5" alt="" />
+
+                <input
+                  type="text"
+                  placeholder="Date and Time"
+                  class="bg-white h-full outline-none border-l w-full border-gray-200 pl-2"
+                />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full text-center cursor-pointer bg-black py-[14px] text-white"
+            >
+              Calculate Price
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- CUSTOMER CARE -->
+
+      <div
+        class="customer-care absolute right-0 bottom-0 max-w-[40%] flex items-center gap-8 bg-white py-[30px] px-[37px] pr-[125px] z-10"
+      >
+        <div class="flex items-center gap-5">
+          <img
+            src="/public/images/customer-service.png"
+            class="w-8 aspect-auto"
+            alt=""
+          />
+          <div class="flex flex-col">
+            <p class="font-semibold text-sm">24/7 Customer Service</p>
+            <p class="text-[13px]">Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <img
+            src="/public/images/push-pin.png"
+            class="w-8 aspect-auto"
+            alt=""
+          />
+          <div class="flex flex-col">
+            <p class="font-semibold text-sm">Early Booking</p>
+            <p class="text-[13px]">Lorem ipsum dolor sit amet, consectetur.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- WELCOME -->
 
