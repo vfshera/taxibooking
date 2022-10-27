@@ -14,24 +14,18 @@
     <script defer>
       let splide;
 
+      // CUSTOM EXTENSION TO UPDATE SLIDE NUMBER
       function SlideNumber(Splide, Components) {
         const { track } = Components.Elements;
 
         let elm;
 
         function mount() {
-          elm = document.createElement("div");
-          elm.style.textAlign = "center";
-          elm.style.marginTop = "0.5em";
-
-          track.parentElement.insertBefore(elm, track.nextSibling);
-
           update();
           Splide.on("move", update);
         }
 
         function update() {
-          elm.textContent = `${Splide.index + 1}/${Splide.length}`;
           document.querySelector("#currentSlide").textContent =
             Splide.index + 1;
           document.querySelector("#totalSlides").textContent = Splide.length;
@@ -124,40 +118,40 @@
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                  <div class="image relative h-full">
+                  <div class="image h-full">
                     <img
                       src="/public/images/wish.png"
                       class="relative z-10"
                       alt=""
                     />
                     <!-- <img
-                      class="image-reflection absolute bottom-20 z-0 [mask-image:linear-gradient(transparent_1%,rgba(255,255,255,.7)_99%)] [transform:rotateX(180deg)] bg-contain bg-no-repeat"
+                      class="image-reflection relative bottom-5 z-0 [mask-image:linear-gradient(transparent_1%,rgba(255,255,255,.7)_99%)] [transform:rotateX(180deg)] bg-contain bg-no-repeat"
                       src="/public/images/wish.png"
                     /> -->
                   </div>
                 </li>
                 <li class="splide__slide">
-                  <div class="image relative h-full">
+                  <div class="image h-full">
                     <img
                       src="/public/images/big-bmw.png"
                       class="relative z-10"
                       alt=""
                     />
                     <!-- <img
-                      class="image-reflection absolute bottom-20 z-0 [mask-image:linear-gradient(transparent_1%,rgba(255,255,255,.7)_99%)] [transform:rotateX(180deg)] bg-contain bg-no-repeat"
+                      class="image-reflection relative bottom-5 z-0 [mask-image:linear-gradient(transparent_1%,rgba(255,255,255,.7)_99%)] [transform:rotateX(180deg)] bg-contain bg-no-repeat"
                       src="/public/images/big-bmw.png"
                     /> -->
                   </div>
                 </li>
                 <li class="splide__slide">
-                  <div class="image relative h-full">
+                  <div class="image h-full">
                     <img
                       src="/public/images/yellow.png"
                       class="relative z-10"
                       alt=""
                     />
                     <!-- <img
-                      class="image-reflection absolute bottom-20 z-0 [mask-image:linear-gradient(transparent_1%,rgba(255,255,255,.7)_99%)] [transform:rotateX(180deg)] bg-contain bg-no-repeat"
+                      class="image-reflection relative bottom-5 z-0 [mask-image:linear-gradient(transparent_1%,rgba(255,255,255,.7)_99%)] [transform:rotateX(180deg)] bg-contain bg-no-repeat"
                       src="/public/images/yellow.png"
                     /> -->
                   </div>
@@ -244,12 +238,16 @@
         </div>
       </div>
 
-      <div class="absolute left-0 bottom-0 h-1/4 w-3/5">
+      <div class="absolute left-0 bottom-0 h-1/3 w-3/5">
         <div class="cta flex items-center justify-center mt-5 gap-10">
-          <button class="py-7 px-11 bg-[#E5F9FD] rounded-[20px]">
+          <button
+            class="py-7 px-11 bg-[#E5F9FD] font-medium text-[30px] rounded-[20px]"
+          >
             Call Now
           </button>
-          <button class="py-7 px-11 bg-[#E5F9FD] rounded-[20px]">
+          <button
+            class="py-7 px-11 bg-[#E5F9FD] font-medium text-[30px] rounded-[20px]"
+          >
             Download Our App
           </button>
         </div>
