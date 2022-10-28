@@ -50,17 +50,17 @@
   <body>
     <!-- MAIN HEADER -->
     <header
-      class="site-container flex justify-between lg:justify-end shadow-sm lg:shadow-none gap-28 items-center h-16 lg:h-[86px]"
+      class="site-container flex justify-between lg:justify-end shadow-sm lg:shadow-none gap-28 items-center h-8 md:h-16 lg:h-[86px]"
     >
       <!-- NAV TOGGLE -->
       <button class="lg:hidden">
-        <img src="/public/images/menu.png" alt="" />
+        <img src="/public/images/menu.png" class="h-5 w-5" alt="" />
       </button>
 
       <!-- LOGO -->
       <div class="logo flex items-center gap-5">
-        <img src="/public/images/logo.png" alt="" class="h-12" />
-        <span class="text-blue font-medium text-2xl">Company</span>
+        <img src="/public/images/logo.png" alt="" class="h-6 md:h-12" />
+        <span class="text-blue font-medium text-xs md:text-2xl">Company</span>
       </div>
 
       <!-- NAVIGATION -->
@@ -95,28 +95,32 @@
 
     <!-- HERO -->
     <section
-      class="hero relative min-h-[490px] lg:min-h-[924px] bg-cover pt-10 lg:pt-36 bg-no-repeat [background-image:url('/public/images/blue-bg.png')]"
+      class="hero relative pb-32 md:min-h-[490px] lg:min-h-[924px] bg-cover pt-10 lg:pt-36 bg-no-repeat bg-center [background-image:url('/public/images/blue-bg.png')]"
     >
       <!-- TEXT CONTAINER -->
-      <div class="site-container flex gap-12 lg:gap-[90px] items-center">
-        <p class="text-2xl lg:text-5xl font-medium text-blue">
+      <div
+        class="site-container flex md:flex-row flex-col-reverse gap-4 md:gap-12 lg:gap-[90px] items-center"
+      >
+        <p class="text-sm md:text-2xl lg:text-5xl font-medium text-blue">
           CALL 1234-456-789
         </p>
 
         <div class="flex flex-col justify-center items-center">
-          <span class="text-2xl lg:text-[40px] text-blue tracking-[.24em]">
+          <span
+            class="text-[10px] md:text-2xl lg:text-[40px] text-blue tracking-[.24em]"
+          >
             ALWAYS THERE WHEN
           </span>
           <span
-            class="text-[40px] lg:text-[70px] font-medium text-blue leading-none"
+            class="text-[20px] md:text-[40px] lg:text-[70px] font-medium text-blue leading-none"
             >YOU NEED A TAXI</span
           >
         </div>
       </div>
 
-      <div class="flex h-full">
+      <div class="flex flex-col lg:flex-row h-full">
         <!-- car -->
-        <div class="car px-5 w-[55%] lg:w-3/5 pt-12 relative h-full">
+        <div class="car px-5 w-full md:w-[55%] lg:w-3/5 pt-12 relative h-full">
           <!-- car slider -->
           <section class="splide" aria-label="Car Slider">
             <div class="splide__track">
@@ -167,9 +171,9 @@
 
         <!-- make-trip -->
         <div
-          class="make-trip w-[45%] lg:w-2/5 pt-[78px] lg:pt-[100px] flex flex-col pr-6 lg:pr-[125px] relative h-full"
+          class="make-trip w-full md:w-[45%] lg:w-2/5 pt-5 md:pt-[78px] lg:pt-[100px] flex flex-col px-3 md:px-0 md:pr-6 lg:pr-[125px] relative h-full"
         >
-          <p class="text-[10px] lg:text-[20px] font-medium">
+          <p class="text-base md:text-[10px] lg:text-[20px] font-medium">
             MAKE YOUR TRIP NOW
           </p>
           <span class="bg-black w-10 h-[2px]"></span>
@@ -240,7 +244,7 @@
 
             <button
               type="submit"
-              class="w-full text-[10px] lg:text-base text-center cursor-pointer bg-black py-2 lg:py-[14px] text-white"
+              class="w-full text-sm md:text-[10px] lg:text-base text-center cursor-pointer bg-black py-4 md:py-2 lg:py-[14px] text-white"
             >
               Calculate Price
             </button>
@@ -248,15 +252,15 @@
         </div>
       </div>
 
-      <div class="absolute left-0 bottom-0 lg:h-1/3 w-3/5">
+      <div class="md:absolute left-0 bottom-0 lg:h-1/3 w-full md:w-3/5">
         <div class="cta flex items-center justify-center mt-5 gap-5 lg:gap-10">
           <button
-            class="py-4 lg:py-7 px-6 lg:px-11 bg-[#E5F9FD] font-medium text-base lg:text-[30px] rounded-xl lg:rounded-[20px]"
+            class="py-4 lg:py-7 px-6 lg:px-11 bg-[#E5F9FD] font-medium text-[8px] md:text-base lg:text-[30px] rounded-xl lg:rounded-[20px]"
           >
             Call Now
           </button>
           <button
-            class="py-4 lg:py-7 px-6 lg:px-11 bg-[#E5F9FD] font-medium text-base lg:text-[30px] rounded-xl lg:rounded-[20px]"
+            class="py-4 lg:py-7 px-6 lg:px-11 bg-[#E5F9FD] font-medium text-[8px] md:text-base lg:text-[30px] rounded-xl lg:rounded-[20px]"
           >
             Download Our App
           </button>
@@ -301,29 +305,35 @@
       <!-- CUSTOMER CARE -->
 
       <div
-        class="customer-care shadow-md lg:shadow-none absolute right-0 bottom-0 w-full lg:max-w-[40%] flex items-center gap-8 bg-white py-[30px] px-[37px] pr-[125px] z-10"
+        class="customer-care shadow-md lg:shadow-none absolute right-0 bottom-0 w-full lg:max-w-[40%] flex items-center gap-8 bg-white py-[30px] px-3 md:px-[37px] md:pr-[125px] z-10"
       >
-        <div class="flex items-center gap-5">
+        <div class="flex items-start md:items-center gap-5">
           <img
             src="/public/images/customer-service.png"
             class="w-8 aspect-auto"
             alt=""
           />
           <div class="flex flex-col">
-            <p class="font-semibold text-sm">24/7 Customer Service</p>
-            <p class="text-[13px]">Lorem ipsum dolor sit amet, consectetur.</p>
+            <p class="font-semibold text-[8px] lg:text-sm">
+              24/7 Customer Service
+            </p>
+            <p class="text-[8px] md:text-[13px]">
+              Lorem ipsum dolor sit amet, consectetur.
+            </p>
           </div>
         </div>
 
-        <div class="flex items-center gap-5">
+        <div class="flex items-start md:items-center gap-5">
           <img
             src="/public/images/push-pin.png"
             class="w-8 aspect-auto"
             alt=""
           />
           <div class="flex flex-col">
-            <p class="font-semibold text-sm">Early Booking</p>
-            <p class="text-[13px]">Lorem ipsum dolor sit amet, consectetur.</p>
+            <p class="font-semibold text-[8px] lg:text-sm">Early Booking</p>
+            <p class="text-[8px] md:text-[13px]">
+              Lorem ipsum dolor sit amet, consectetur.
+            </p>
           </div>
         </div>
       </div>
@@ -334,21 +344,21 @@
     <section
       class="welcome pt-16 lg:pt-[80px] pb-[56px] flex flex-col items-center"
     >
-      <h1 class="text-[28px] lg:text-[60px] font-medium">
+      <h1 class="text-base md:text-[28px] lg:text-[60px] font-medium">
         WELCOME TO TAXI <span class="text-blue">BOOKING</span> WEBSITE
       </h1>
-      <h3 class="text-lg lg:text-5xl font-medium">
+      <h3 class="text-sm md:text-lg lg:text-5xl font-medium">
         WE HAVE MOST RELIABLE TAXI FLEET
       </h3>
     </section>
 
     <!-- CONTACT -->
     <section
-      class="contact flex justify-between py-[70px] px-[43px] [background-image:url('/public/images/contact-bg.png')] bg-cover"
+      class="contact flex gap-10 flex-col items-center md:items-start md:flex-row md:justify-between py-[70px] px-5 md:px-[43px] [background-image:url('/public/images/contact-bg.png')] bg-cover"
     >
-      <div class="w-3/5">
+      <div class="w-full md:w-3/5">
         <div
-          class="card rounded-[10px] flex flex-col overflow-hidden w-[330px] lg:w-[621px]"
+          class="card rounded-[10px] flex flex-col overflow-hidden md:w-[330px] lg:w-[621px]"
         >
           <div
             class="card-header bg-[#79a4bd] px-5 lg:px-12 flex flex-col py-3 lg:pt-[23px] lg:pb-[34px]"
@@ -388,7 +398,7 @@
         </div>
       </div>
 
-      <div class="w-2/5 flex flex-col gap-8 lg:gap-[63px] text-white">
+      <div class="w-full md:w-2/5 flex flex-col gap-8 lg:gap-[63px] text-white">
         <!-- call us -->
         <div class="flex flex-col gap-4 lg:gap-[35px]">
           <p class="text-xl lg:text-4xl font-medium">Call Us</p>
@@ -416,19 +426,23 @@
 
     <!-- FLEETS -->
 
-    <section class="fleets site-container flex flex-col gap-20 py-12">
-      <h2 class="text-[34px] lg:text-[60px] font-semibold text-center">
+    <section class="fleets site-container flex flex-col gap-7 md:gap-20 py-12">
+      <h2
+        class="text-lg md:text-[34px] lg:text-[60px] font-semibold text-center"
+      >
         OUR <span class="text-blue">FLEETS</span>
       </h2>
 
       <!-- fleets  -->
-      <div class="grid grid-cols-2 gap-y-16 gap-x-24 lg:gap-44">
+      <div
+        class="grid grid-cols-2 gap-x-6 gap-y-10 md:gap-y-16 md:gap-x-24 lg:gap-44"
+      >
         <!-- saloon -->
         <article
-          class="saloon overflow-hidden rounded-[21px] pb-9 lg:pb-14 flex flex-col items-center bg-[#E5F9FD] [box-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
+          class="saloon overflow-hidden rounded-lg md:rounded-[21px] pb-6 md:pb-9 lg:pb-14 flex flex-col justify-between items-center bg-[#E5F9FD] [box-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
         >
           <div
-            class="bg-blue text-xl lg:text-[36px] py-5 font-semibold w-full text-white text-center"
+            class="bg-blue text-sm md:text-xl lg:text-[36px] py-2 md:py-5 font-semibold w-full text-white text-center"
           >
             SALOON
           </div>
@@ -436,7 +450,7 @@
           <img src="/public/images/audi.png" alt="" />
 
           <ul
-            class="flex items-center text-sm lg:text-base flex-col gap-5 mt-10"
+            class="flex items-center text-sm lg:text-base flex-col gap-5 mt-5 md:mt-10"
           >
             <li class="w-max text-center flex items-center gap-2">
               <img src="/public/images/dots.png" alt="" />
@@ -450,17 +464,17 @@
           </ul>
 
           <button
-            class="bg-[#338DC3] font-medium text-base lg:text-[29px] w-max mt-12 text-white px-7 lg:px-12 py-2 lg:py-4 rounded-[10px]"
+            class="bg-[#338DC3] font-medium text-sm md:text-base lg:text-[29px] w-max mt-7 md:mt-12 text-white px-7 lg:px-12 py-2 lg:py-4 rounded md:rounded-[10px]"
           >
             View Fleet
           </button>
         </article>
         <!-- executive -->
         <article
-          class="executive overflow-hidden rounded-[21px] pb-9 lg:pb-14 flex flex-col items-center justify-between bg-[#E5F9FD] [box-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
+          class="saloon overflow-hidden rounded-lg md:rounded-[21px] pb-6 md:pb-9 lg:pb-14 flex justify-between flex-col items-center bg-[#E5F9FD] [box-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
         >
           <div
-            class="bg-blue text-xl lg:text-[36px] py-5 font-semibold w-full text-white text-center"
+            class="bg-blue text-sm md:text-xl lg:text-[36px] py-2 md:py-5 font-semibold w-full text-white text-center"
           >
             EXECUTIVE
           </div>
@@ -468,7 +482,7 @@
           <img src="/public/images/benz.png" alt="" />
 
           <ul
-            class="flex items-center text-sm lg:text-base flex-col gap-5 mt-10"
+            class="flex items-center text-sm lg:text-base flex-col gap-5 mt-5 md:mt-10"
           >
             <li class="w-max text-center flex items-center gap-2">
               <img src="/public/images/dots.png" alt="" />
@@ -482,17 +496,17 @@
           </ul>
 
           <button
-            class="bg-[#338DC3] font-medium text-base lg:text-[29px] w-max mt-12 text-white px-7 lg:px-12 py-2 lg:py-4 rounded-[10px]"
+            class="bg-[#338DC3] font-medium text-sm md:text-base lg:text-[29px] w-max mt-7 md:mt-12 text-white px-7 lg:px-12 py-2 lg:py-4 rounded md:rounded-[10px]"
           >
             View Fleet
           </button>
         </article>
         <!-- saloon -->
         <article
-          class="saloon overflow-hidden rounded-[21px] pb-9 lg:pb-14 flex flex-col items-center bg-[#E5F9FD] [box-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
+          class="saloon overflow-hidden rounded-lg md:rounded-[21px] pb-6 md:pb-9 lg:pb-14 flex flex-col justify-between items-center bg-[#E5F9FD] [box-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
         >
           <div
-            class="bg-blue text-xl lg:text-[36px] py-5 font-semibold w-full text-white text-center"
+            class="bg-blue text-sm md:text-xl lg:text-[36px] py-2 md:py-5 font-semibold w-full text-white text-center"
           >
             SALOON
           </div>
@@ -500,7 +514,7 @@
           <img src="/public/images/audi.png" alt="" />
 
           <ul
-            class="flex items-center text-sm lg:text-base flex-col gap-5 mt-10"
+            class="flex items-center text-sm lg:text-base flex-col gap-5 mt-5 md:mt-10"
           >
             <li class="w-max text-center flex items-center gap-2">
               <img src="/public/images/dots.png" alt="" />
@@ -514,17 +528,17 @@
           </ul>
 
           <button
-            class="bg-[#338DC3] font-medium text-base lg:text-[29px] w-max mt-12 text-white px-7 lg:px-12 py-2 lg:py-4 rounded-[10px]"
+            class="bg-[#338DC3] font-medium text-sm md:text-base lg:text-[29px] w-max mt-7 md:mt-12 text-white px-7 lg:px-12 py-2 lg:py-4 rounded md:rounded-[10px]"
           >
             View Fleet
           </button>
         </article>
         <!-- executive -->
         <article
-          class="executive overflow-hidden rounded-[21px] pb-9 lg:pb-14 flex flex-col items-center justify-between bg-[#E5F9FD] [box-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
+          class="saloon overflow-hidden rounded-lg md:rounded-[21px] pb-6 md:pb-9 lg:pb-14 flex justify-between flex-col items-center bg-[#E5F9FD] [box-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
         >
           <div
-            class="bg-blue text-xl lg:text-[36px] py-5 font-semibold w-full text-white text-center"
+            class="bg-blue text-sm md:text-xl lg:text-[36px] py-2 md:py-5 font-semibold w-full text-white text-center"
           >
             EXECUTIVE
           </div>
@@ -532,7 +546,7 @@
           <img src="/public/images/benz.png" alt="" />
 
           <ul
-            class="flex items-center text-sm lg:text-base flex-col gap-5 mt-10"
+            class="flex items-center text-sm lg:text-base flex-col gap-5 mt-5 md:mt-10"
           >
             <li class="w-max text-center flex items-center gap-2">
               <img src="/public/images/dots.png" alt="" />
@@ -546,14 +560,14 @@
           </ul>
 
           <button
-            class="bg-[#338DC3] font-medium text-base lg:text-[29px] w-max mt-12 text-white px-7 lg:px-12 py-2 lg:py-4 rounded-[10px]"
+            class="bg-[#338DC3] font-medium text-sm md:text-base lg:text-[29px] w-max mt-7 md:mt-12 text-white px-7 lg:px-12 py-2 lg:py-4 rounded md:rounded-[10px]"
           >
             View Fleet
           </button>
         </article>
       </div>
 
-      <p class="text-base lg:text-[28px] text-center">
+      <p class="text-sm md:text-base lg:text-[28px] text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor
       </p>
@@ -562,17 +576,19 @@
     <!-- JOURNEY -->
 
     <section
-      class="journey h-[500px] lg:h-[960px] [background-image:url('/public/images/journey-bg.png')] bg-cover"
+      class="journey h-[242px] md:h-[500px] lg:h-[960px] [background-image:url('/public/images/journey-bg.png')] bg-cover"
     >
       <div
-        class="overlay w-full h-full bg-black/40 justify-center flex-col lg:gap-8 text-white items-center flex"
+        class="overlay py-14 md:py-0 w-full h-full bg-black/40 justify-center flex-col lg:gap-8 text-white items-center flex"
       >
-        <h4 class="text-3xl lg:text-[60px]">Enjoy The Journey With Us</h4>
-        <p class="text-xl lg:text-[40px]">
+        <h4 class="text-lg md:text-3xl lg:text-[60px]">
+          Enjoy The Journey With Us
+        </h4>
+        <p class="text-sm md:text-xl lg:text-[40px]">
           You should be surely enjoy the ride with us.
         </p>
         <button
-          class="text-xl lg:text-[40px] rounded-[14px] border-[3px] mt-10 border-blue py-4 lg:py-5 px-10"
+          class="text-sm md:text-xl lg:text-[40px] rounded-[14px] border-[3px] mt-10 border-blue py-4 lg:py-5 px-10"
         >
           Book Now
         </button>
@@ -584,10 +600,12 @@
     <section
       class="feedback py-16 lg:py-28 px-7 lg:px-16 flex flex-col items-center"
     >
-      <h2 class="text-3xl lg:text-[65px] font-semibold text-center">
+      <h2 class="text-xl md:text-3xl lg:text-[65px] font-semibold text-center">
         FEED <span class="text-blue">BACK</span>
       </h2>
-      <p class="text-base lg:text-[32px] lg:my-5">What Customer think of us.</p>
+      <p class="text-sm md:text-base lg:text-[32px] lg:my-5">
+        What Customer think of us.
+      </p>
       <div class="start flex items-center gap-1">
         <img src="/public/images/star.png" class="h-5 lg:h-10" alt="" />
         <img src="/public/images/star.png" class="h-5 lg:h-10" alt="" />
@@ -597,7 +615,7 @@
       </div>
 
       <div
-        class="feedbacks grid grid-cols-2 gap-7 lg:gap-[60px] mt-12 lg:mt-[90px]"
+        class="feedbacks grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-7 lg:gap-[60px] mt-12 lg:mt-[90px]"
       >
         <!-- feedback -->
         <div
@@ -639,47 +657,51 @@
     <!-- FOOTER -->
     <section>
       <div
-        class="travel-with-us"
+        class="travel-with-us bg-cover bg-center"
         style="background-image: url('/public/images/build.png')"
       >
         <div
-          class="bg-black/50 text-4xl lg:text-[64px] font-bold text-white py-28 flex justify-center items-center"
+          class="bg-black/50 text-[14px] md:text-4xl lg:text-[64px] font-bold text-white pb-20 py-8 md:py-28 flex justify-center items-center"
         >
           Lets Travel With Us
         </div>
       </div>
-      <div class="site-container bg-[#80B8DA] text-white py-3 flex gap-14">
+      <div
+        class="site-container bg-[#80B8DA] text-white py-3 flex gap-3 md:gap-14"
+      >
         <img
           src="/public/images/facebook.png"
           alt=""
-          class="h-5 aspect-square"
+          class="h-4 md:h-5 aspect-square"
         />
         <img
           src="/public/images/linkedin.png"
           alt=""
-          class="h-5 aspect-square"
+          class="h-4 md:h-5 aspect-square"
         />
         <img
           src="/public/images/instagram.png"
           alt=""
-          class="h-5 aspect-square"
+          class="h-4 md:h-5 aspect-square"
         />
         <img
           src="/public/images/twitter.png"
           alt=""
-          class="h-5 aspect-square"
+          class="h-4 md:h-5 aspect-square"
         />
       </div>
 
-      <footer class="site-container grid grid-cols-5 py-12 gap-10 items-end">
-        <div class="brand col-span-2">
+      <footer
+        class="site-container grid grid-cols-1 md:grid-cols-5 py-12 gap-10 items-end"
+      >
+        <div class="brand md:col-span-2 px-5 md:px-0">
           <img
             src="/public/images/logo-big.png"
             class="w-[88px] lg:w-[166px]"
             alt=""
           />
           <p
-            class="max-w-[188px] lg:max-w-[350px] text-sm lg:text-2xl font-medium text-[#7A7A7A]"
+            class="max-w-[50%] md:max-w-[188px] lg:max-w-[350px] text-sm lg:text-2xl font-medium text-[#80B8DA] md:text-[#7A7A7A]"
           >
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -687,9 +709,9 @@
           </p>
         </div>
 
-        <nav class="links">
+        <nav class="links px-5 md:px-0">
           <ul
-            class="text-sm lg:text-2xl font-medium text-[#7A7A7A] flex flex-col gap-3"
+            class="text-lg lg:text-2xl font-medium text-[#80B8DA] md:text-[#7A7A7A] flex flex-col gap-3"
           >
             <li>
               <a href="">Home</a>
@@ -709,18 +731,30 @@
           </ul>
         </nav>
 
-        <div class="col-span-2">
+        <div class="md:col-span-2 px-5 md:px-0">
           <div
-            class="bg-[#B0D3E8] h-[126px] lg:h-[237px] py-[27px] px-8 w-full rounded-tr-[42px] lg:rounded-tr-[80px] rounded-bl-[42px] lg:rounded-bl-[80px]"
+            class="bg-[#B0D3E8] [box-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-max lg:h-[237px] py-[27px] px-8 rounded-tr-[42px] lg:rounded-tr-[80px] rounded-bl-[42px] lg:rounded-bl-[80px]"
           >
-            <p>Email</p>
-            <p>abc@gmail.com</p>
+            <div class="text-white md:text-black">
+              <p>Email</p>
+              <p>abc@gmail.com</p>
+            </div>
+            <div class="text-white md:text-black mt-5">
+              <p>Phone</p>
+              <p>123 456 789</p>
+            </div>
           </div>
+
+          <button
+            class="bg-[#B0D3E8] [box-shadow:0px_4px_4px_rgba(0,0,0,0.25)] font-semibold text-sm text-white mt-10 w-3/5 py-3 rounded-tr-[20px] rounded-bl-[20px]"
+          >
+            Call Now
+          </button>
         </div>
       </footer>
 
       <div
-        class="text-[#7A7A7A] py-[26px] border-t text-xs lg:text-base border-[#80B8DA] text-center"
+        class="text-[#B0D3E8] md:text-[#7A7A7A] py-[26px] border-t text-[8px] md:text-xs lg:text-base border-[#80B8DA] text-center"
       >
         Copyright 2022 All Rights Reserved | Microsoft Learn Student Ambassador
         Imsciences
