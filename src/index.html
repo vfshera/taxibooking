@@ -25,6 +25,10 @@
           document.querySelector("#currentSlide").textContent =
             Splide.index + 1;
           document.querySelector("#totalSlides").textContent = Splide.length;
+          document.querySelector("#currentMobileSlide").textContent =
+            Splide.index + 1;
+          document.querySelector("#totalMobileSlides").textContent =
+            Splide.length;
         }
 
         return {
@@ -171,7 +175,7 @@
 
     <!-- HERO -->
     <section
-      class="hero relative pb-48 md:min-h-[490px] lg:min-h-[924px] bg-cover pt-10 md:pt-24 lg:pt-36 bg-no-repeat bg-center [background-image:url('/public/images/blue-bg.png')]"
+      class="hero relative pb-14 md:pb-48 md:min-h-[490px] lg:min-h-[924px] bg-cover pt-14 md:pt-24 lg:pt-36 bg-no-repeat bg-center [background-image:url('/public/images/blue-bg.png')]"
     >
       <!-- TEXT CONTAINER -->
       <div
@@ -243,6 +247,57 @@
               </ul>
             </div>
           </section>
+
+          <!-- MOBILE -->
+          <div class="md:hidden w-full relative mb-14 mt-10 h-14">
+            <div class="cta flex items-center justify-center -mt-10 gap-5">
+              <button
+                class="py-4 px-6 bg-[#E5F9FD] font-medium text-[8px] rounded-xl"
+              >
+                Call Now
+              </button>
+              <button
+                class="py-4 px-6 bg-[#E5F9FD] font-medium text-[8px] rounded-xl"
+              >
+                Download Our App
+              </button>
+            </div>
+
+            <div class="socials absolute -bottom-10 left-0">
+              <ul class="flex flex-col items-center gap-2">
+                <li>
+                  <a href="">
+                    <img src="/public/images/ig_dark.png" class="h-5" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="/public/images/fb_dark.png" class="h-5" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="/public/images/wa_dark.png" class="h-5" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="my-slider-nav absolute left-0 w-full -bottom-10 flex justify-center items-center gap-5"
+            >
+              <button id="prevBtn" onclick="goTo('<')">
+                <img src="/public/images/prev.png" alt="" />
+              </button>
+              <div class="slideNum">
+                <span id="currentMobileSlide" class="text-2xl"></span> /
+                <span id="totalMobileSlides"></span>
+              </div>
+              <button id="nextBtn" onclick="goTo('>')">
+                <img src="/public/images/next.png" alt="" />
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- make-trip -->
