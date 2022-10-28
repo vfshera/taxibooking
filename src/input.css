@@ -12,5 +12,5 @@ body {
 }
 
 .site-container {
-  @apply px-[125px];
+  @apply px-6 lg:px-[125px];
 }
