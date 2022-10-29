@@ -6,6 +6,40 @@
     <link href="/dist/output.css" rel="stylesheet" />
 
     <script src="./index.js" defer></script>
+
+    <script defer>
+      (function () {
+        var setting = {
+          zoom: 11,
+          queryString: "Nairobi, Kenya",
+          place_id: "ChIJp0lN2HIRLxgRTJKXslQCz_c",
+          satellite: false,
+          centerCoord: [-1.3032127252997825, 36.84739688764218],
+          cid: "0xf7cf0254b297924c",
+          lang: "en",
+          cityUrl: "/kenya/nairobi-222",
+          cityAnchorText: "Map of Nairobi, Nakuru, Kenya",
+          id: "map-9cd199b9cc5410cd3b1ad21cab2e54d3",
+          embed_id: "829131",
+        };
+        var d = document;
+        var s = d.createElement("script");
+        s.src = "https://1map.com/js/script-for-user.js?embed_id=829131";
+        s.async = true;
+        s.onload = function (e) {
+          // GETTING CONTAINER HEIGHT
+          const { clientHeight, clientWidth } =
+            document.querySelector("#mapContainer");
+
+          //SETTING HEIGHT FROM CONTAINER
+          setting.height = clientHeight;
+          setting.width = clientWidth;
+          window.OneMap.initMap(setting);
+        };
+        var to = d.getElementsByTagName("script")[0];
+        to.parentNode.insertBefore(s, to);
+      })();
+    </script>
   </head>
   <body>
     <!-- MOBILE NAV -->
@@ -129,39 +163,50 @@
 
     <!-- FORM 1.1 HERO -->
     <section
-      class="h-[728px] bg-no-repeat bg-cover"
+      class="h-[190px] md:h-[386px] mt-10 md:mt-16 lg:mt-0 lg:h-[728px] bg-no-repeat bg-cover"
       style="background-image: url('/public/images/taxibooking-bg.png')"
     >
       <div
-        class="bg-black/50 h-full w-full flex flex-col gap-16 items-center justify-center"
+        class="bg-black/50 h-full w-full flex flex-col gap-3 md:gap-8 lg:gap-16 items-center justify-center"
       >
-        <h1 class="text-[64px] text-white font-semibold">Taxi Booking</h1>
-        <p class="text-[36px] font-semibold text-white">
+        <h1
+          class="text-2xl md:text-3xl lg:text-[64px] text-white font-semibold"
+        >
+          Taxi Booking
+        </h1>
+        <p
+          class="text-[10px] md:text-xl lg:text-[36px] font-semibold text-white"
+        >
           24/7 Online Booking Taxi Service
         </p>
-        <p class="text-[36px] font-semibold text-white">
+        <p
+          class="text-[10px] md:text-xl lg:text-[36px] font-semibold text-white"
+        >
           Safe, Reliable and Cost Effective Taxi Service
         </p>
       </div>
     </section>
 
     <!-- BOOKING NAV -->
-    <section class="py-[162px] px-[116px]">
+    <section class="py-8 md:py-20 lg:py-[162px] px-2 lg:px-[116px]">
       <nav class="relative">
         <ul class="relative z-10 flex justify-around">
           <li>
             <a href="" class="flex flex-col items-center gap-5">
-              <div class="circle-wrapper p-3 bg-white rounded-full">
+              <div class="circle-wrapper p-1 md:p-3 bg-white rounded-full">
                 <div
-                  class="circle w-[92px] aspect-square bg-blue rounded-full text-white flex justify-center items-center font-semibold text-[32px]"
+                  class="circle w-7 md:w-12 lg:w-[92px] aspect-square bg-blue rounded-full text-white flex justify-center items-center font-semibold text-[10px] md:text-xl lg:text-[32px]"
                 >
                   1
                 </div>
               </div>
-              <p class="text-[32px] font-semibold text-black/50">
+              <p
+                class="text-[10px] md:text-xl lg:text-[32px] font-semibold text-black/50"
+              >
                 Trip Details
               </p>
               <svg
+                class="h-7 md:h-11"
                 width="47"
                 height="69"
                 viewBox="0 0 47 69"
@@ -177,17 +222,20 @@
           </li>
           <li>
             <a href="" class="flex flex-col items-center gap-5">
-              <div class="circle-wrapper p-3 bg-white rounded-full">
+              <div class="circle-wrapper p-1 md:p-3 bg-white rounded-full">
                 <div
-                  class="circle w-[92px] aspect-square bg-[#404040] rounded-full text-white flex justify-center items-center font-semibold text-[32px]"
+                  class="circle w-7 md:w-12 lg:w-[92px] aspect-square bg-[#404040] rounded-full text-white flex justify-center items-center font-semibold text-[10px] md:text-xl lg:text-[32px]"
                 >
                   2
                 </div>
               </div>
-              <p class="text-[32px] font-semibold text-black/50">
+              <p
+                class="text-[10px] md:text-xl lg:text-[32px] font-semibold text-black/50"
+              >
                 Select Vehicle
               </p>
               <svg
+                class="h-7 md:h-11"
                 width="97"
                 height="62"
                 viewBox="0 0 97 62"
@@ -203,17 +251,20 @@
           </li>
           <li>
             <a href="" class="flex flex-col items-center gap-5">
-              <div class="circle-wrapper p-3 bg-white rounded-full">
+              <div class="circle-wrapper p-1 md:p-3 bg-white rounded-full">
                 <div
-                  class="circle w-[92px] aspect-square bg-[#404040] rounded-full text-white flex justify-center items-center font-semibold text-[32px]"
+                  class="circle w-7 md:w-12 lg:w-[92px] aspect-square bg-[#404040] rounded-full text-white flex justify-center items-center font-semibold text-[10px] md:text-xl lg:text-[32px]"
                 >
                   3
                 </div>
               </div>
-              <p class="text-[32px] font-semibold text-black/50">
+              <p
+                class="text-[10px] md:text-xl lg:text-[32px] font-semibold text-black/50"
+              >
                 Payment Details
               </p>
               <svg
+                class="h-7 md:h-11"
                 width="99"
                 height="72"
                 viewBox="0 0 99 72"
@@ -229,17 +280,20 @@
           </li>
           <li>
             <a href="" class="flex flex-col items-center gap-5">
-              <div class="circle-wrapper p-3 bg-white rounded-full">
+              <div class="circle-wrapper p-1 md:p-3 bg-white rounded-full">
                 <div
-                  class="circle w-[92px] aspect-square bg-[#404040] rounded-full text-white flex justify-center items-center font-semibold text-[32px]"
+                  class="circle w-7 md:w-12 lg:w-[92px] aspect-square bg-[#404040] rounded-full text-white flex justify-center items-center font-semibold text-[10px] md:text-xl lg:text-[32px]"
                 >
                   4
                 </div>
               </div>
-              <p class="text-[32px] font-semibold text-black/50">
+              <p
+                class="text-[10px] md:text-xl lg:text-[32px] font-semibold text-black/50"
+              >
                 Confirmation
               </p>
               <svg
+                class="h-7 md:h-11"
                 width="96"
                 height="96"
                 viewBox="0 0 96 96"
@@ -256,96 +310,74 @@
         </ul>
 
         <div
-          class="line absolute top-[58px] z-0 w-full bg-black/50 h-[2px]"
+          class="line absolute top-4 md:top-9 lg:top-[58px] z-0 w-full bg-black/50 h-[2px]"
         ></div>
       </nav>
     </section>
 
     <!-- BOOKING FORM -->
 
-    <section class="booking-form flex items-center py-14 px-10">
-      <div class="form-area w-1/2 bg-blue">
+    <section
+      class="booking-form flex flex-col items-center md:items-start md:flex-row gap-10 lg:gap-[76px] pb-14 px-6 lg:px-10"
+    >
+      <div class="form-area w-[90%] mt-5 md:mt-0 md:w-1/2 bg-blue">
         <p
-          class="text-[36px] font-semibold py-5 text-center text-white border-b border-white"
+          class="text-base md:text-xl lg:text-[36px] font-semibold py-3 md:py-4 lg:py-5 text-center text-white border-b border-white"
         >
           Instant Fare Quote
         </p>
-        <form action="" class="px-8 flex flex-col gap-10 py-10">
-          <div class="flex flex-col items-end gap-5">
+        <form
+          action=""
+          class="px-5 lg:px-8 flex flex-col gap-4 lg:gap-10 py-4 md:py-8 lg:py-10"
+        >
+          <div class="flex flex-col items-end gap-2 md:gap-5">
             <div class="input-group w-full">
               <input
                 type="text"
-                class="py-5 px-11 w-full outline-none text-[30px] bg-[#e5f9fd] placeholder:text-blue text-blue"
+                class="py-3 lg:py-5 px-5 md:px-6 lg:px-11 w-full outline-none text-[13px] md:text-base lg:text-3xl bg-[#e5f9fd] placeholder:text-blue text-blue"
                 placeholder="Enter pickup location"
               />
             </div>
             <div class="input-group w-full">
               <input
                 type="text"
-                class="py-5 px-11 w-full outline-none text-[30px] bg-[#e5f9fd] placeholder:text-blue text-blue"
+                class="py-3 lg:py-5 px-5 md:px-6 lg:px-11 w-full outline-none text-[13px] md:text-base lg:text-3xl bg-[#e5f9fd] placeholder:text-blue text-blue"
                 placeholder="Enter dropoff location"
               />
             </div>
             <button
-              class="bg-[#e5f9fd] text-blue py-4 w-max pl-12 pr-3 rounded-3xl"
+              class="bg-[#e5f9fd] text-blue text-[10px] md:text-xs lg:text-base py-3 lg:py-4 w-max pl-6 lg:pl-12 pr-2 lg:pr-3 rounded-3xl"
             >
               Add waypoint
             </button>
           </div>
 
           <!-- MAP -->
-          <div class="h-[350px]">
+          <div id="mapContainer" class="h-[144px] md:h-[188px] lg:h-[350px]">
+            <!-- 1map stuff -->
             <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
               <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
-              <script>
-                (function () {
-                  var setting = {
-                    height: 350,
-                    width: 803,
-                    zoom: 11,
-                    queryString: "Nairobi, Kenya",
-                    place_id: "ChIJp0lN2HIRLxgRTJKXslQCz_c",
-                    satellite: false,
-                    centerCoord: [-1.3032127252997825, 36.84739688764218],
-                    cid: "0xf7cf0254b297924c",
-                    lang: "en",
-                    cityUrl: "/kenya/nairobi-222",
-                    cityAnchorText: "Map of Nairobi, Nakuru, Kenya",
-                    id: "map-9cd199b9cc5410cd3b1ad21cab2e54d3",
-                    embed_id: "829131",
-                  };
-                  var d = document;
-                  var s = d.createElement("script");
-                  s.src =
-                    "https://1map.com/js/script-for-user.js?embed_id=829131";
-                  s.async = true;
-                  s.onload = function (e) {
-                    window.OneMap.initMap(setting);
-                  };
-                  var to = d.getElementsByTagName("script")[0];
-                  to.parentNode.insertBefore(s, to);
-                })();
-              </script>
-              <a href="https://1map.com/map-embed">1 Map</a>
             </div>
           </div>
 
-          <div class="flex flex-col items-end gap-5">
+          <div class="flex flex-col items-end gap-3 md:gap-5">
             <div class="input-group w-full">
-              <label for="" class="text-white text-3xl font-semibold"
+              <label
+                for=""
+                class="text-white text-sm md:text-base lg:text-3xl font-semibold"
                 >Pickup Date & Time</label
               >
-              <div class="flex items-center bg-[#e5f9fd] mt-3">
+              <div class="flex items-center bg-[#e5f9fd] mt-1 md:mt-3">
                 <input
                   id="dateInput"
                   type="date"
-                  class="py-5 px-11 outline-none w-[55%] text-3xl bg-[#e5f9fd] placeholder:text-blue text-blue"
+                  class="py-3 lg:py-5 px-5 lg:px-11 outline-none w-[55%] text-sm md:text-base lg:text-3xl bg-[#e5f9fd] placeholder:text-blue text-blue"
                   placeholder="Enter pickup location"
                 />
                 <div class="selects flex w-[45%]">
                   <div class="relative w-1/2 border-l-2 border-blue">
                     <select
-                      class="block appearance-none w-full text-blue bg-[#e5f9fd] text-3xl py-5 px-11 leading-tight focus:outline-none"
+                      class="block appearance-none w-full text-blue bg-[#e5f9fd] text-sm md:text-base lg:text-3xl py-3 lg:py-5 px-4 lg:px-11 leading-tight focus:outline-none"
                       id="grid-state"
                     >
                       <option>12</option>
@@ -368,7 +400,7 @@
                   </div>
                   <div class="relative w-1/2 border-l-2 border-blue">
                     <select
-                      class="block appearance-none w-full text-blue bg-[#e5f9fd] text-3xl py-5 px-11 leading-tight focus:outline-none"
+                      class="block appearance-none w-full text-blue bg-[#e5f9fd] text-sm md:text-base lg:text-3xl py-3 lg:py-5 px-4 lg:px-11 leading-tight focus:outline-none"
                       id="grid-state"
                     >
                       <option>00</option>
@@ -394,14 +426,16 @@
             </div>
           </div>
           <!-- passangers and bags -->
-          <div class="grid grid-cols-2 mt-4 gap-5">
-            <div class="flex flex-col gap-4">
-              <label for="" class="text-white text-3xl font-semibold"
+          <div class="grid grid-cols-2 md:mt-4 gap-2 md:gap-5">
+            <div class="flex flex-col gap-2 md:gap-4">
+              <label
+                for=""
+                class="text-white text-sm md:text-base lg:text-3xl font-semibold"
                 >Passangers</label
               >
               <div class="relative w-full border-l-2 border-blue">
                 <select
-                  class="block appearance-none w-full text-blue bg-[#e5f9fd] text-3xl py-5 px-11 leading-tight focus:outline-none"
+                  class="block appearance-none w-full text-blue bg-[#e5f9fd] text-sm md:text-base lg:text-3xl py-3 lg:py-5 px-4 lg:px-11 leading-tight focus:outline-none"
                   id="grid-state"
                 >
                   <option>1</option>
@@ -424,13 +458,15 @@
               </div>
             </div>
 
-            <div class="flex flex-col gap-4">
-              <label for="" class="text-white text-3xl font-semibold"
+            <div class="flex flex-col gap-2 md:gap-4">
+              <label
+                for=""
+                class="text-white text-sm md:text-base lg:text-3xl font-semibold"
                 >Bags</label
               >
               <div class="relative w-full border-l-2 border-blue">
                 <select
-                  class="block appearance-none w-full text-blue bg-[#e5f9fd] text-3xl py-5 px-11 leading-tight focus:outline-none"
+                  class="block appearance-none w-full text-blue bg-[#e5f9fd] text-sm md:text-base lg:text-3xl py-3 lg:py-5 px-4 lg:px-11 leading-tight focus:outline-none"
                   id="grid-state"
                 >
                   <option>1</option>
@@ -457,7 +493,7 @@
           <!-- one way -->
           <div class="relative w-full">
             <select
-              class="block appearance-none w-full text-blue bg-[#e5f9fd] text-3xl py-5 px-11 leading-tight focus:outline-none"
+              class="block appearance-none w-full text-blue bg-[#e5f9fd] text-sm md:text-base lg:text-3xl py-3 lg:py-5 px-5 lg:px-11 leading-tight focus:outline-none"
               id="grid-state"
             >
               <option>One way</option>
@@ -477,21 +513,48 @@
             </div>
           </div>
 
-          <button type="submit" class="bg-black text-white py-5 font-bold">
+          <button
+            type="submit"
+            class="bg-black text-sm md:text-base text-white py-3 md:py-5 font-bold"
+          >
             RESERVE NOW
           </button>
-          <p class="text-center text-2xl text-white">
+          <p class="text-center text-xs lg:text-2xl text-white">
             If you have already book the ride then manage your bookings
           </p>
         </form>
 
-        <div class="flex justify-center mb-10">
-          <button class="bg-white text-blue py-4 rounded-xl px-10">
+        <div class="flex justify-center mb-6 md:mb-10">
+          <button
+            class="bg-white text-sm md:text-base text-blue py-3 md:py-4 rounded-xl px-5 md:px-10"
+          >
             Manage your Bookings
           </button>
         </div>
       </div>
-      <div class="w-1/2"></div>
+      <div class="w-[90%] md:w-1/2 flex flex-col">
+        <h2 class="text-2xl lg:text-5xl font-medium mt-10 lg:mt-20">
+          Taxi Booking
+        </h2>
+        <p class="text-base lg:text-3xl mt-9 lg:mt-20">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud
+        </p>
+        <p class="text-base lg:text-3xl text-blue mt-7 lg:mt-10">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor
+        </p>
+        <p class="text-base lg:text-3xl mt-9 lg:mt-20">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud
+        </p>
+
+        <div
+          class="h-[241px] lg:h-[450px] bg-[#D9D9D9] mt-5 [background-image:url('/public/images/angus.png')] bg-no-repeat bg-cover"
+        ></div>
+      </div>
     </section>
 
     <!-- FOOTER -->
@@ -501,7 +564,7 @@
         style="background-image: url('/public/images/build.png')"
       >
         <div
-          class="bg-black/50 text-[14px] md:text-4xl lg:text-[64px] font-bold text-white pb-20 py-8 md:py-28 flex justify-center items-center"
+          class="bg-black/50 text-[15px] md:text-4xl lg:text-[64px] font-bold text-white pb-20 py-8 md:py-28 flex justify-center items-center"
         >
           Lets Travel With Us
         </div>
