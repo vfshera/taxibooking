@@ -294,7 +294,41 @@
           </div>
 
           <!-- MAP -->
-          <div class="h-[350px] border border-red-500"></div>
+          <div class="h-[350px]">
+            <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+              <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+              <script>
+                (function () {
+                  var setting = {
+                    height: 350,
+                    width: 803,
+                    zoom: 11,
+                    queryString: "Nairobi, Kenya",
+                    place_id: "ChIJp0lN2HIRLxgRTJKXslQCz_c",
+                    satellite: false,
+                    centerCoord: [-1.3032127252997825, 36.84739688764218],
+                    cid: "0xf7cf0254b297924c",
+                    lang: "en",
+                    cityUrl: "/kenya/nairobi-222",
+                    cityAnchorText: "Map of Nairobi, Nakuru, Kenya",
+                    id: "map-9cd199b9cc5410cd3b1ad21cab2e54d3",
+                    embed_id: "829131",
+                  };
+                  var d = document;
+                  var s = d.createElement("script");
+                  s.src =
+                    "https://1map.com/js/script-for-user.js?embed_id=829131";
+                  s.async = true;
+                  s.onload = function (e) {
+                    window.OneMap.initMap(setting);
+                  };
+                  var to = d.getElementsByTagName("script")[0];
+                  to.parentNode.insertBefore(s, to);
+                })();
+              </script>
+              <a href="https://1map.com/map-embed">1 Map</a>
+            </div>
+          </div>
 
           <div class="flex flex-col items-end gap-5">
             <div class="input-group w-full">
