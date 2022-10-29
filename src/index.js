@@ -7,3 +7,6 @@ function showNav() {
 function closeNav() {
   nav.classList.add("hidden");
 }
+
+// SET DATE INPUT TO TODAY
+document.querySelector("#dateInput").valueAsDate = new Date();

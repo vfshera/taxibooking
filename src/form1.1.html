@@ -5,52 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
 
-    <!-- SPLIDE-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
-    <script defer>
-      let splide;
-
-      // CUSTOM EXTENSION TO UPDATE SLIDE NUMBER
-      function SlideNumber(Splide, Components) {
-        function mount() {
-          update();
-          Splide.on("move", update);
-        }
-
-        function update() {
-          document.querySelector("#currentSlide").textContent =
-            Splide.index + 1;
-          document.querySelector("#totalSlides").textContent = Splide.length;
-          document.querySelector("#currentMobileSlide").textContent =
-            Splide.index + 1;
-          document.querySelector("#totalMobileSlides").textContent =
-            Splide.length;
-        }
-
-        return {
-          mount,
-        };
-      }
-      document.addEventListener("DOMContentLoaded", function () {
-        splide = new Splide(".splide", {
-          type: "loop",
-          autoplay: true,
-          arrows: false,
-          pagination: false,
-        });
-
-        splide.mount({ SlideNumber });
-      });
-
-      function goTo(direction) {
-        splide.go(direction);
-      }
-    </script>
-
     <script src="./index.js" defer></script>
   </head>
   <body>
@@ -305,6 +259,205 @@
           class="line absolute top-[58px] z-0 w-full bg-black/50 h-[2px]"
         ></div>
       </nav>
+    </section>
+
+    <!-- BOOKING FORM -->
+
+    <section class="booking-form flex items-center py-14 px-10">
+      <div class="form-area w-1/2 bg-blue">
+        <p
+          class="text-[36px] font-semibold py-5 text-center text-white border-b border-white"
+        >
+          Instant Fare Quote
+        </p>
+        <form action="" class="px-8 flex flex-col gap-10 py-10">
+          <div class="flex flex-col items-end gap-5">
+            <div class="input-group w-full">
+              <input
+                type="text"
+                class="py-5 px-11 w-full outline-none text-[30px] bg-[#e5f9fd] placeholder:text-blue text-blue"
+                placeholder="Enter pickup location"
+              />
+            </div>
+            <div class="input-group w-full">
+              <input
+                type="text"
+                class="py-5 px-11 w-full outline-none text-[30px] bg-[#e5f9fd] placeholder:text-blue text-blue"
+                placeholder="Enter dropoff location"
+              />
+            </div>
+            <button
+              class="bg-[#e5f9fd] text-blue py-4 w-max pl-12 pr-3 rounded-3xl"
+            >
+              Add waypoint
+            </button>
+          </div>
+
+          <!-- MAP -->
+          <div class="h-[350px] border border-red-500"></div>
+
+          <div class="flex flex-col items-end gap-5">
+            <div class="input-group w-full">
+              <label for="" class="text-white text-3xl font-semibold"
+                >Pickup Date & Time</label
+              >
+              <div class="flex items-center bg-[#e5f9fd] mt-3">
+                <input
+                  id="dateInput"
+                  type="date"
+                  class="py-5 px-11 outline-none w-[55%] text-3xl bg-[#e5f9fd] placeholder:text-blue text-blue"
+                  placeholder="Enter pickup location"
+                />
+                <div class="selects flex w-[45%]">
+                  <div class="relative w-1/2 border-l-2 border-blue">
+                    <select
+                      class="block appearance-none w-full text-blue bg-[#e5f9fd] text-3xl py-5 px-11 leading-tight focus:outline-none"
+                      id="grid-state"
+                    >
+                      <option>12</option>
+                      <option>11</option>
+                      <option>10</option>
+                    </select>
+                    <div
+                      class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                    >
+                      <svg
+                        class="fill-blue h-4 w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="relative w-1/2 border-l-2 border-blue">
+                    <select
+                      class="block appearance-none w-full text-blue bg-[#e5f9fd] text-3xl py-5 px-11 leading-tight focus:outline-none"
+                      id="grid-state"
+                    >
+                      <option>00</option>
+                      <option>01</option>
+                      <option>02</option>
+                    </select>
+                    <div
+                      class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                    >
+                      <svg
+                        class="fill-blue h-4 w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- passangers and bags -->
+          <div class="grid grid-cols-2 mt-4 gap-5">
+            <div class="flex flex-col gap-4">
+              <label for="" class="text-white text-3xl font-semibold"
+                >Passangers</label
+              >
+              <div class="relative w-full border-l-2 border-blue">
+                <select
+                  class="block appearance-none w-full text-blue bg-[#e5f9fd] text-3xl py-5 px-11 leading-tight focus:outline-none"
+                  id="grid-state"
+                >
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                >
+                  <svg
+                    class="fill-blue h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <label for="" class="text-white text-3xl font-semibold"
+                >Bags</label
+              >
+              <div class="relative w-full border-l-2 border-blue">
+                <select
+                  class="block appearance-none w-full text-blue bg-[#e5f9fd] text-3xl py-5 px-11 leading-tight focus:outline-none"
+                  id="grid-state"
+                >
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                >
+                  <svg
+                    class="fill-blue h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- one way -->
+          <div class="relative w-full">
+            <select
+              class="block appearance-none w-full text-blue bg-[#e5f9fd] text-3xl py-5 px-11 leading-tight focus:outline-none"
+              id="grid-state"
+            >
+              <option>One way</option>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            >
+              <svg
+                class="fill-blue h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <button type="submit" class="bg-black text-white py-5 font-bold">
+            RESERVE NOW
+          </button>
+          <p class="text-center text-2xl text-white">
+            If you have already book the ride then manage your bookings
+          </p>
+        </form>
+
+        <div class="flex justify-center mb-10">
+          <button class="bg-white text-blue py-4 rounded-xl px-10">
+            Manage your Bookings
+          </button>
+        </div>
+      </div>
+      <div class="w-1/2"></div>
     </section>
 
     <!-- FOOTER -->
